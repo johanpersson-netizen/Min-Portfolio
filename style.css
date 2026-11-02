@@ -72,7 +72,7 @@ body {
     margin: 0;
     flex: 0 1 350px;
 }
-.hero.portrait img {
+.hero-portrait img {
     display: block;
     width: 100%;
     max-width: 350px;
@@ -97,6 +97,7 @@ header {
     position: sticky;
     top: 0;
     background-color: #101d2b;
+    border: 1px solid #0e2e52;
     padding: 20px 10px;
     z-index: 1000;
 }
@@ -119,8 +120,8 @@ nav ul {
     display: flex;
     gap: 25px;
     list-style: none;
-    margin: 1.5;
-    padding: 1.5;
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
@@ -141,8 +142,7 @@ nav a:hover {
     border-radius: 8px;
     color: #75b9d8;
     text-decoration: none;
-    transition: color 0.3s ease;
-    background-color: 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 .button-link:hover {
     color: #95c9e0;
@@ -172,4 +172,52 @@ nav a:hover {
 }
 .menu-toggle.active span:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
+}
+#kompetenser {
+    padding: 80px 10%;
+} 
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.skill-card,
+.project-card {
+    text-align: center;
+    background-color: #041527;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #0e2e52;
+    transition: transform 0.7s ease, 
+                border-color 0.7s ease, 
+                box-shadow 0.7s ease;
+}
+.skill-card i {
+    font-size: 2rem;
+    display: inline-block;
+    transition: transform 0.7s ease;
+}
+.skill-card:hover,
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #75b9d8;
+    box-shadow: 3px 10px 40px rgba(129, 186, 216, 0.3);
+}
+.skill-card:hover i {
+    transform: scale(1.2);
+}
+#projekt {
+    padding: 80px 10%;
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+.project-card {
+    text-align: center;
+    background-color: #041527;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #0e2e52;
 }

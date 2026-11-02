@@ -6,6 +6,7 @@
     <title>Min Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />               
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -13,7 +14,7 @@
     <header>
         <!-- Navigeringen kommer här -->
         <nav aria-label="Huvudmeny">
-           <a href="#start" class="logo">Min Portfolio</a>
+           <a href="#start" class="logo">Min Portfolio (toppen av sidan)</a>
             <button id="menuToggle" class="menu-toggle" 
                     type="button" aria-label="Öppna menyn"
                     title="Öppna menyn">
@@ -31,7 +32,7 @@
     </header>
 
     <main>
-        <!-- Startsidan kommer här -->
+        <!-- Startsidan  -->
         <section id="start" class="hero">
             <div class="hero-content">
                 <p class="eyebrow">MIN RESA INOM SYSTEMUTVECKLING</p>
@@ -57,7 +58,7 @@
             </figure>
         </section>
 
-        <!-- Om mig kommer här -->
+        <!-- Om mig  -->
         <section id="om-mig">
             <div class="about-content">
                 <h2>Om mig</h2>
@@ -78,16 +79,69 @@
             </figure>
         </section>
 
-        <!-- Kompetenser kommer här -->
+        <!-- Kompetenser  -->
         <section id="kompetenser">
             <h2>Kompetenser</h2>
-            <p>Här kommer mina kompetenser att finnas</p>
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <h3>
+                        C# <i class="devicon-csharp-plain"></i>
+                    </h3>
+                    <p>Programmering och objektorientering</p>
+                </article>
+                <article class="skill-card">
+                    <h3>
+                        HTML <i class="devicon-html5-plain"></i>
+                        och CSS <i class="devicon-css3-plain"></i>
+                    </h3>
+                    <p>Struktur och responsiv design</p>
+                </article>
+                <article class="skill-card">
+                    <h3>
+                        JavaScript <i class="devicon-javascript-plain"></i> 
+                    </h3>
+                    <p>DOM och interaktivitet</p>
+                </article>
+                <article class="skill-card">
+                    <h3>
+                        Git <i class="devicon-git-plain"></i>
+                        & GitHub <i class="devicon-github-original"></i> 
+                    </h3>
+                    <p>Versionshantering</p>
+                </article>
+            </div>
         </section>
 
          <!-- Projektet kommer här -->
         <section id="projekt">
            <h2>Projekt</h2>
-           <p>Här kommer projekt att förevisas</p>
+           <div class="projects-grid">
+            <article class="project-card">
+                <h3>Bibliotekshanteringssystem</h3>
+                <p>En konsolbaserad applikation för att hantera böcker, 
+                    användare och utlåning. 
+                    Projektet är byggt med objektorienterad programmering
+                </p>
+                <p class="project-tech">Tekniker som använts i projektet: C#, OOP, och List&lt;T&gt;  
+                </p>
+            </article>
+
+            <article class="project-card">
+                <h3>Points Mark</h3>
+                <p>En konsolbaserad applikation för att registrera och hantera poäng. 
+                    Registrera användare och visa statistik.</p>
+                <p class="project-tech">Tekniker som använts i projektet: C# och List&lt;T&gt;</p>
+            </article>
+
+            <article class="project-card">
+                <h3>Min professionella portfolio</h3>
+                <p>Ett projekt som sammanför HTML-struktur, CSS-design och interaktivitet via JavaScript.
+                    Webbsidan är responsiv i sin design och dynamiskt presenterad.
+                </p>
+                <p class="project-tech">Tekniker som använts i projektet: HTML, CSS och JavaScript.</p>
+            </article>
+           </div>
+           
         </section>
 
         <!-- Kontakt kommer här -->

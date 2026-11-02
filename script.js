@@ -8,9 +8,11 @@ menuToggle.addEventListener("click", function() {
     let menuOpen = navLinks.classList.contains("show-menu");
     if(menuOpen) {
         menuToggle.setAttribute("title", "Stäng menyn")
+        menuToggle.setAttribute("aria-label", "Stäng menyn")
     }
     else {
         menuToggle.setAttribute("title", "Öppna menyn")
+        menuToggle.setAttribute("aria-label", "Öppna menyn")
     }
 });
 
