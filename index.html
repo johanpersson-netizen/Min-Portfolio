@@ -24,6 +24,7 @@
             </button>
            <ul id="navLinks">
             <li><a href="#om-mig">Om mig</a></li>
+            <li><a href="#musik">Musik & Kreativitet</a></li>
             <li><a href="#kompetenser">Kompetenser</a></li>
             <li><a href="#projekt">Projekt</a></li>
             <li><a href="#kontakt">Kontakt</a></li>
@@ -78,6 +79,43 @@
                 <figcaption>Nyfikenhet, utveckling och problemlösning.</figcaption>
             </figure>
         </section>
+        
+        <section id="musik">
+            <h2>Teknik möter kreativitet</h2>
+
+            <figure class="musik-images">
+                <img src="Images/gitarrhuvud.jpg" alt="Närbild på gitarrens huvud">
+                <img src="Images/elbas.jpg" alt="Elbas">
+                <img src="Images/floydstall.jpeg" alt="Gitarrens Floyd Rose-stall">
+                <img src="Images/kemper.jpg" alt="Kemper gitarrförstärkare">
+            </figure>
+
+            <p>
+                Innan jag började studera systemutveckling arbetade
+                jag i 25 år som gitarrlärare. Musik har därför alltid
+                varit en stor del av mitt liv.
+            </p>
+
+            <p>
+                Jag har även studerat musikproduktion och skrivit,
+                producerat och spelat in ett eget album med 12 låtar.
+            </p>
+
+            <p>
+                Mitt intresse för musik och teknik har väckt en idé
+                om att i framtiden erbjuda specialskriven musik till
+                företag, exempelvis jinglar och signaturmelodier
+                som förstärker ett varumärke.
+            </p>
+
+            <a id="musik-link" href="https://open.spotify.com/album/2qTO6iReV90O8hCw9FwNGS"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button-link">
+            Lyssna på mitt album på Spotify
+            </a>
+
+        </section>
 
         <!-- Kompetenser  -->
         <section id="kompetenser">
@@ -118,27 +156,39 @@
            <div class="projects-grid">
             <article class="project-card">
                 <h3>Bibliotekshanteringssystem</h3>
-                <p>En konsolbaserad applikation för att hantera böcker, 
-                    användare och utlåning. 
-                    Projektet är byggt med objektorienterad programmering
+                <p>En konsolbaserad applikation för att hantera böcker,användare och utlåning.
+                    Projektet är byggt med objektorienterad programmering.
                 </p>
                 <p class="project-tech">Tekniker som använts i projektet: C#, OOP, och List&lt;T&gt;  
                 </p>
+                <a href="https://github.com/johanpersson-netizen/Bibliotekshanteringssystem" 
+                        target="_blank"
+                        rel="noopener noreferrer">
+                    Länk till GitHub <i class="devicon-github-plain"></i></a>
             </article>
 
             <article class="project-card">
                 <h3>Points Mark</h3>
-                <p>En konsolbaserad applikation för att registrera och hantera poäng. 
-                    Registrera användare och visa statistik.</p>
+                <p>En konsolbaserad applikation för att registrera spelare,
+                    hantera poäng och presentera statistik
+                </p>
                 <p class="project-tech">Tekniker som använts i projektet: C# och List&lt;T&gt;</p>
+                <a href="https://github.com/johanpersson-netizen/Points-Mark"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                Länk till GitHub <i class="devicon-github-plain"></i></a>
             </article>
 
             <article class="project-card">
                 <h3>Min professionella portfolio</h3>
                 <p>Ett projekt som sammanför HTML-struktur, CSS-design och interaktivitet via JavaScript.
-                    Webbsidan är responsiv i sin design och dynamiskt presenterad.
+                    Webbsidan är responsiv i sin design och interaktiv med JavaScript.
                 </p>
                 <p class="project-tech">Tekniker som använts i projektet: HTML, CSS och JavaScript.</p>
+                <a href="https://github.com/johanpersson-netizen/Min-Portfolio"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                Länk till GitHub <i class="devicon-github-plain"></i></a>
             </article>
            </div>
            
@@ -147,7 +197,35 @@
         <!-- Kontakt kommer här -->
         <section id="kontakt">
             <h2>Kontakt</h2>
-            <p>Här kommer det att finnas kontaktuppgifter</p>
+            <p>Har du frågor eller vill komma i kontakt med mig?</p>
+            <p>Skicka gärna ett meddelande!</p>
+
+            <form id="contact-form" action="https://formspree.io/f/mljjoqyb" method="POST">
+                <div class="form-name">
+                <label for="name">Namn</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-email">
+                <label for="email">E-post</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+
+                <div class="form-subject">
+                <label for="subject">Ämne</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                </div>
+
+                <div class="form-message">
+                <label for="message">Meddelande</label>
+                <textarea id="message" name="message" rows="5" placeholder="Please type message here." required></textarea>
+                </div>
+                
+                <button type="submit">Skicka meddelande</button>
+
+                <p id="form-message" aria-live="polite"></p>
+
+            </form>
         </section>
     </main>
 

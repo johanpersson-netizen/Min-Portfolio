@@ -26,3 +26,48 @@ navItems.forEach(function(item) {
         menuToggle.setAttribute("title", "Öppna menyn");
     });
 });
+
+//Variabler för att kunna lyssna efter om användaren försöker skicka ett meddelande.
+let kontaktForm = document.getElementById("contact-form");
+let formMeddelande = document.getElementById("form-message");
+
+//Variabel för "Skicka Meddelande" knappen.
+let skickaKnapp = kontaktForm.querySelector('button[type="submit"]');
+
+//Lyssnar efter att användaren trycker på "Skicka meddelande" - "submit"
+kontaktForm.addEventListener("submit", async function (event) {
+
+    //stoppar att webbläsaren laddas om
+    event.preventDefault();
+
+    //Variabel för att kunna få ut data från inmatning i kontakt delen.
+    let formulardata = new FormData(kontaktForm);
+
+    //Deaktiverar skicka knappen tills meddelandet skickats. Ändrar bool i finally blocket.
+        skickaKnapp.disabled = true;
+        skickaKnapp.textContent = "Skickar...";
+    try {//Fetch() - Skicka till Formspree. Await - Vänta på respons
+        let svar = await fetch("https://formspree.io/f/mljjoqyb", {
+            method: "POST",
+            body: formulardata,
+            headers: {
+                "Accept": "application/json"
+            }
+        });
+        //Kolla så det gick att skicka meddelandet.
+        if (svar.ok) {
+                formMeddelande.textContent = "Tack för ditt meddelande! Jag återkommer så snart jag kan.";
+                kontaktForm.reset();    
+            }
+            else {
+                formMeddelande.textContent = "Meddelandet kunde inte skickas. Försök igen senare.";
+            }
+    //Fångar upp eventuella fel - Tappad internetanslutning t.ex.        
+    } catch (fel) {
+        formMeddelande.textContent = "Ett tekniskt fel uppstod. Försök igen senare.";
+    }
+    finally {
+        skickaKnapp.disabled = false;
+        skickaKnapp.textContent = "Skicka meddelande";
+    }
+});

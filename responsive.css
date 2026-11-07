@@ -32,6 +32,12 @@
         text-align: center;
         padding: 40px 6%;
     }
+    #kompetenser {
+        padding: 40px 6%;
+    }
+    #projekt {
+        padding: 40px 6%;
+    }
     .about-portrait img {
         max-width: 260px;
     }
@@ -42,5 +48,17 @@
         background: none;
         border: none;
         cursor: pointer;
+    }
+    #kontakt form {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "namn"
+            "epost"
+            "amne"
+            "meddelande"
+            "knapp";
+    }
+    #kontakt {
+        padding: 40px 10%;
     }
 }
