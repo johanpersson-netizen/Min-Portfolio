@@ -19,19 +19,73 @@ body {
     max-width: 350px;
     height: auto;
 }
+.musik-images figure {
+    margin: 0;
+}
 .musik-images {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(4, minmax(0, 135px));
+    gap: 40px;
+    justify-content: start;
     margin: 30px 0;
 }
 .musik-images img {
+    border: 1px solid #0e2e52;
     width: 100%;
-    max-width: 220px;
-    height: auto;
+    height: 220px;
     object-fit: cover;
     border-radius: 15px;
 }
+.image-gallery {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    border-radius: 15px 15px 0 0;
+    transition: 0.5s ease;
+}
+#image-dialog {
+    text-align: center;
+    font-size: large;
+    max-width: 90vw;
+    max-height: 90vh;
+    padding: 40px;
+    border: 1px solid #75b9d8;
+    border-radius: 15px;
+    background-color: #101d2b;
+    color: #e8f0f4;
+}
+#dialog-image {
+    border: 1px solid #8ecae6;
+    border-radius: 3px;
+    display: block;
+    max-width: 100%;
+    max-height: 65vh;
+    object-fit: contain;
+    margin: 20px auto;
+}
+#close-dialog {
+    display: block;
+    margin-left: auto;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+#close-dialog:hover {
+    transform: translateY(-5px) scale(1.05);
+    border-color: #75b9d8;
+    box-shadow: 3px 10px 40px rgba(129, 186, 216, 0.3);
+}
+#close-dialog:focus-visible {
+    outline: 2px solid #75b9d8;
+    outline-offset: 5px;
+    border-radius: 3px;
+    transform: translateY(-5px) scale(1.05);    
+    border-color: #75b9d8;
+    box-shadow: 3px 10px 40px rgba(129, 186, 216, 0.3);
+}
+
 /*Om mig*/
 #om-mig {
     display: flex;
@@ -51,6 +105,7 @@ body {
 }
 
 .about-portrait img {
+    border: 1px solid #0e2e52;
     width: 100%;
     max-width: 300px;
     height: auto;
@@ -219,7 +274,7 @@ nav a:hover {
     display: inline-block;
     transition: transform 0.7s ease;
 }
-
+.image-gallery:hover,
 .skill-card:hover,
 .project-card:hover {
     transform: translateY(-5px);
@@ -248,11 +303,12 @@ nav a:hover {
     text-decoration: underline;
     box-shadow: 0px 10px 20px #75b9d8;
 }
+.image-gallery:focus-visible,
 .project-card a:focus-visible {
     outline: 2px solid #75b9d8;
     outline-offset: 5px;
     border-radius: 3px;
-    transform: scale(1.15);
+    transform: scale(1.05);
     color: #75b9d8;
 }
 #kontakt form {

@@ -32,6 +32,9 @@
         text-align: center;
         padding: 40px 6%;
     }
+    .musik-images {
+        grid-template-columns: repeat(2, minmax(0, 135px));
+    }
     #kompetenser {
         padding: 40px 6%;
     }

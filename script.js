@@ -71,3 +71,44 @@ kontaktForm.addEventListener("submit", async function (event) {
         skickaKnapp.textContent = "Skicka meddelande";
     }
 });
+
+//Variablar för de classer och id:n som ska inhämtas för bildgalleriet.
+const galleryImages = document.querySelectorAll(".image-gallery");
+const imageDialog = document.getElementById("image-dialog");
+const dialogImage = document.getElementById("dialog-image");
+const dialogCaption = document.getElementById("dialog-caption");
+const closeDialog = document.getElementById("close-dialog");
+
+//Funktion för att iterera mellan buttons.
+galleryImages.forEach(function(button) {
+    button.addEventListener("click", function() {
+        //Hämtar bilden och bildtexten från den klickade knappen (bilden).
+        const image = button.querySelector("img");
+        const figCaption = button.querySelector("figcaption");
+
+        //Hämtar bildens sökväg, alternativa text och bildtext.
+        const imageSrc = image.src;
+        const imageAlt = image.alt;
+        const captionText = figCaption.textContent;
+
+        //Tilldelar informationen till elementen i dialogrutan.
+        dialogImage.src = imageSrc;
+        dialogImage.alt = imageAlt;
+        dialogCaption.textContent = captionText;
+
+        imageDialog.showModal();
+
+    });
+});
+
+//Funktion som stänger fönstret om användaren klickar utanför bilden.
+imageDialog.addEventListener("click", function(event) {
+    if (event.target === imageDialog) {
+        imageDialog.close();
+    }
+});
+
+ //Funktion för att aktivera stäng knappen i galleriet.
+closeDialog.addEventListener("click", function() {        
+    imageDialog.close();
+}); 

@@ -79,17 +79,10 @@
                 <figcaption>Nyfikenhet, utveckling och problemlösning.</figcaption>
             </figure>
         </section>
-        
+
         <section id="musik">
             <h2>Teknik möter kreativitet</h2>
-
-            <figure class="musik-images">
-                <img src="Images/gitarrhuvud.jpg" alt="Närbild på gitarrens huvud">
-                <img src="Images/elbas.jpg" alt="Elbas">
-                <img src="Images/floydstall.jpeg" alt="Gitarrens Floyd Rose-stall">
-                <img src="Images/kemper.jpg" alt="Kemper gitarrförstärkare">
-            </figure>
-
+                   
             <p>
                 Innan jag började studera systemutveckling arbetade
                 jag i 25 år som gitarrlärare. Musik har därför alltid
@@ -100,6 +93,42 @@
                 Jag har även studerat musikproduktion och skrivit,
                 producerat och spelat in ett eget album med 12 låtar.
             </p>
+
+            <div class="musik-images">
+                <button type="button" class="image-gallery">
+                    <figure>
+                        <img src="Images/elbas.jpg" alt="Kroppen av en Fender Jazz Elbas" title="Kroppen av en Fender Jazz Elbas">
+                        <figcaption>Kroppen av en Fender Jazz Elbas</figcaption>
+                    </figure>
+                </button>
+
+                <button type="button" class="image-gallery">
+                    <figure>
+                        <img src="Images/floydstall.jpeg" alt="Gitarrens Floyd Rose-stall" title="Gitarrens Floyd Rose-stall">
+                        <figcaption>Gitarrens Floyd Rose-stall</figcaption>
+                    </figure>
+                </button>
+
+                <button type="button" class="image-gallery">
+                    <figure>
+                        <img src="Images/gitarrhuvud.jpg" alt="Närbild på gitarrens huvud" title="Närbild på gitarrens huvud">                
+                        <figcaption>Närbild på gitarrens huvud</figcaption>
+                    </figure>
+                </button>
+
+                <button type="button" class="image-gallery">
+                    <figure>
+                        <img src="Images/kemper.jpg" alt="Kemper gitarrförstärkare" title="Kemper gitarrförstärkare">
+                        <figcaption>Kemper gitarrförstärkare</figcaption>
+                    </figure>
+                </button>
+            </div>
+
+            <dialog id="image-dialog">
+                <button type="button" id="close-dialog">Stäng</button>
+                <img id="dialog-image" src="" alt="">
+                <p id="dialog-caption"></p>
+            </dialog>
 
             <p>
                 Mitt intresse för musik och teknik har väckt en idé
