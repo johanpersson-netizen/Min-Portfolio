@@ -1,3 +1,4 @@
+//HAMBURGERMENYN
 let menuToggle = document.getElementById("menuToggle");
 let navLinks = document.getElementById("navLinks");
 
@@ -6,6 +7,7 @@ menuToggle.addEventListener("click", function() {
     menuToggle.classList.toggle("active");
 
     let menuOpen = navLinks.classList.contains("show-menu");
+    menuToggle.setAttribute("aria-expanded", menuOpen);
     if(menuOpen) {
         menuToggle.setAttribute("title", "Stäng menyn")
         menuToggle.setAttribute("aria-label", "Stäng menyn")
@@ -24,9 +26,12 @@ navItems.forEach(function(item) {
         navLinks.classList.remove("show-menu");
         menuToggle.setAttribute("aria-label", "Öppna menyn");
         menuToggle.setAttribute("title", "Öppna menyn");
+        menuToggle.setAttribute("aria-expanded", false);
     });
 });
 
+
+//KONTAKTFORMULÄRET
 //Variabler för att kunna lyssna efter om användaren försöker skicka ett meddelande.
 let kontaktForm = document.getElementById("contact-form");
 let formMeddelande = document.getElementById("form-message");
@@ -44,9 +49,11 @@ kontaktForm.addEventListener("submit", async function (event) {
     let formulardata = new FormData(kontaktForm);
 
     //Deaktiverar skicka knappen tills meddelandet skickats. Ändrar bool i finally blocket.
-        skickaKnapp.disabled = true;
-        skickaKnapp.textContent = "Skickar...";
-    try {//Fetch() - Skicka till Formspree. Await - Vänta på respons
+    skickaKnapp.disabled = true;
+    skickaKnapp.textContent = "Skickar...";
+        
+    try { 
+        //Fetch() - Skicka till Formspree. Await - Vänta på respons
         let svar = await fetch("https://formspree.io/f/mljjoqyb", {
             method: "POST",
             body: formulardata,
@@ -56,13 +63,13 @@ kontaktForm.addEventListener("submit", async function (event) {
         });
         //Kolla så det gick att skicka meddelandet.
         if (svar.ok) {
-                formMeddelande.textContent = "Tack för ditt meddelande! Jag återkommer så snart jag kan.";
-                kontaktForm.reset();    
-            }
-            else {
-                formMeddelande.textContent = "Meddelandet kunde inte skickas. Försök igen senare.";
-            }
-    //Fångar upp eventuella fel - Tappad internetanslutning t.ex.        
+            formMeddelande.textContent = "Tack för ditt meddelande! Jag återkommer så snart jag kan.";
+            kontaktForm.reset();
+        }
+        else {
+            formMeddelande.textContent = "Meddelandet kunde inte skickas. Försök igen senare.";
+        }
+    //Fångar upp eventuella fel - Tappad internetanslutning t.ex.
     } catch (fel) {
         formMeddelande.textContent = "Ett tekniskt fel uppstod. Försök igen senare.";
     }
@@ -72,6 +79,8 @@ kontaktForm.addEventListener("submit", async function (event) {
     }
 });
 
+
+//BILDGALLERIET
 //Variablar för de classer och id:n som ska inhämtas för bildgalleriet.
 const galleryImages = document.querySelectorAll(".image-gallery");
 const imageDialog = document.getElementById("image-dialog");
@@ -84,7 +93,7 @@ galleryImages.forEach(function(button) {
     button.addEventListener("click", function() {
         //Hämtar bilden och bildtexten från den klickade knappen (bilden).
         const image = button.querySelector("img");
-        const figCaption = button.querySelector("figcaption");
+        const figCaption = button.parentElement.querySelector("figcaption");
 
         //Hämtar bildens sökväg, alternativa text och bildtext.
         const imageSrc = image.src;

@@ -4,25 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Min Portfolio</title>
+
+    <!-- Externa ikonbibliotek -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />  
+    
+    <!-- Egna CSS filer -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />               
+
+    <!-- JavaScript filen -->
     <script src="script.js" defer></script>
 </head>
 <body>
-
+    <!-- Navigeringen kommer här -->
     <header>
-        <!-- Navigeringen kommer här -->
         <nav aria-label="Huvudmeny">
-           <a href="#start" class="logo">Min Portfolio (toppen av sidan)</a>
+           <a href="#start" class="logo">Min Portfolio</a>
             <button id="menuToggle" class="menu-toggle" 
                     type="button" aria-label="Öppna menyn"
+                    aria-expanded="false"
                     title="Öppna menyn">
                 <span></span>  
                 <span></span>
                 <span></span>  
             </button>
            <ul id="navLinks">
+            <li><a href="#start">Start</a></li>
             <li><a href="#om-mig">Om mig</a></li>
             <li><a href="#musik">Musik & Kreativitet</a></li>
             <li><a href="#kompetenser">Kompetenser</a></li>
@@ -80,6 +88,7 @@
             </figure>
         </section>
 
+        <!-- Musik & Kreativitet -->
         <section id="musik">
             <h2>Teknik möter kreativitet</h2>
                    
@@ -93,38 +102,43 @@
                 Jag har även studerat musikproduktion och skrivit,
                 producerat och spelat in ett eget album med 12 låtar.
             </p>
-
-            <div class="musik-images">
-                <button type="button" class="image-gallery">
-                    <figure>
-                        <img src="Images/elbas.jpg" alt="Kroppen av en Fender Jazz Elbas" title="Kroppen av en Fender Jazz Elbas">
-                        <figcaption>Kroppen av en Fender Jazz Elbas</figcaption>
-                    </figure>
-                </button>
-
-                <button type="button" class="image-gallery">
-                    <figure>
-                        <img src="Images/floydstall.jpeg" alt="Gitarrens Floyd Rose-stall" title="Gitarrens Floyd Rose-stall">
-                        <figcaption>Gitarrens Floyd Rose-stall</figcaption>
-                    </figure>
-                </button>
-
-                <button type="button" class="image-gallery">
-                    <figure>
-                        <img src="Images/gitarrhuvud.jpg" alt="Närbild på gitarrens huvud" title="Närbild på gitarrens huvud">                
-                        <figcaption>Närbild på gitarrens huvud</figcaption>
-                    </figure>
-                </button>
-
-                <button type="button" class="image-gallery">
-                    <figure>
-                        <img src="Images/kemper.jpg" alt="Kemper gitarrförstärkare" title="Kemper gitarrförstärkare">
-                        <figcaption>Kemper gitarrförstärkare</figcaption>
-                    </figure>
-                </button>
+            <!-- Bildgalleriet -->
+            <div class="musik-images">               
+                <figure>
+                    <button type="button" class="image-gallery">
+                        <img src="Images/elbas.jpg"
+                            alt="Kroppen av en Fender Jazz Elbas">
+                    </button>
+                    <figcaption>Kroppen av en Fender Jazz Elbas</figcaption>
+                </figure>
+                 
+                <figure>
+                    <button type="button" class="image-gallery">
+                        <img src="Images/floydstall.jpeg"
+                            alt="Gitarrens Floyd Rose-stall">
+                    </button>
+                    <figcaption>Gitarrens Floyd Rose-stall</figcaption>
+                </figure>
+                                
+                <figure>
+                    <button type="button" class="image-gallery">
+                        <img src="Images/gitarrhuvud.jpg"
+                            alt="Närbild på gitarrens huvud">
+                    </button>               
+                    <figcaption>Närbild på gitarrens huvud</figcaption>
+                </figure>
+                
+                
+                <figure>
+                    <button type="button" class="image-gallery">
+                        <img src="Images/kemper.jpg"
+                            alt="Kemper gitarrförstärkare">
+                    </button>
+                    <figcaption>Kemper gitarrförstärkare</figcaption>
+                </figure>               
             </div>
 
-            <dialog id="image-dialog">
+            <dialog id="image-dialog" aria-labelledby="dialog-caption">
                 <button type="button" id="close-dialog">Stäng</button>
                 <img id="dialog-image" src="" alt="">
                 <p id="dialog-caption"></p>
@@ -146,7 +160,7 @@
 
         </section>
 
-        <!-- Kompetenser  -->
+        <!-- Kompetenser -->
         <section id="kompetenser">
             <h2>Kompetenser</h2>
             <div class="skills-grid">
@@ -155,6 +169,7 @@
                         C# <i class="devicon-csharp-plain"></i>
                     </h3>
                     <p>Programmering och objektorientering</p>
+                    <p class="skill-level">Grundläggande kunskaper</p>
                 </article>
                 <article class="skill-card">
                     <h3>
@@ -162,12 +177,14 @@
                         och CSS <i class="devicon-css3-plain"></i>
                     </h3>
                     <p>Struktur och responsiv design</p>
+                    <p class="skill-level">Grundläggande kunskaper</p>
                 </article>
                 <article class="skill-card">
                     <h3>
                         JavaScript <i class="devicon-javascript-plain"></i> 
                     </h3>
                     <p>DOM och interaktivitet</p>
+                    <p class="skill-level">Grundläggande kunskaper</p>
                 </article>
                 <article class="skill-card">
                     <h3>
@@ -175,17 +192,32 @@
                         & GitHub <i class="devicon-github-original"></i> 
                     </h3>
                     <p>Versionshantering</p>
+                    <p class="skill-level">Grundläggande kunskaper</p>
                 </article>
+                <article class="skill-card">
+                    <h3>
+                        AI <i class="fa-solid fa-brain"></i>
+                    </h3>
+                    <p>AI-assisterad utveckling och prompt engineering</p>
+                    <p class="skill-level">Goda kunskaper</p>
+                </article>
+                <article class="skill-card">
+                    <h3>
+                        Cubase <i class="fa-solid fa-sliders"></i>
+                    </h3>
+                    <p>Musikproduktion och ljudbearbetning</p>
+                    <p class="skill-level">Mycket goda kunskaper</p>
+                </article>                
             </div>
         </section>
 
-         <!-- Projektet kommer här -->
+         <!-- Projektet -->
         <section id="projekt">
            <h2>Projekt</h2>
            <div class="projects-grid">
             <article class="project-card">
                 <h3>Bibliotekshanteringssystem</h3>
-                <p>En konsolbaserad applikation för att hantera böcker,användare och utlåning.
+                <p>En konsolbaserad applikation för att hantera böcker, användare och utlåning.
                     Projektet är byggt med objektorienterad programmering.
                 </p>
                 <p class="project-tech">Tekniker som använts i projektet: C#, OOP, och List&lt;T&gt;  
@@ -223,7 +255,7 @@
            
         </section>
 
-        <!-- Kontakt kommer här -->
+        <!-- Kontakt -->
         <section id="kontakt">
             <h2>Kontakt</h2>
             <p>Har du frågor eller vill komma i kontakt med mig?</p>
@@ -232,35 +264,66 @@
             <form id="contact-form" action="https://formspree.io/f/mljjoqyb" method="POST">
                 <div class="form-name">
                 <label for="name">Namn</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <input type="text" id="name" name="name" placeholder="Ditt namn" required>
                 </div>
 
                 <div class="form-email">
                 <label for="email">E-post</label>
-                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                <input type="email" id="email" name="email" placeholder="din@epost.se" required>
                 </div>
 
                 <div class="form-subject">
                 <label for="subject">Ämne</label>
-                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                <input type="text" id="subject" name="subject" placeholder="Ämne" required>
                 </div>
 
                 <div class="form-message">
                 <label for="message">Meddelande</label>
-                <textarea id="message" name="message" rows="5" placeholder="Please type message here." required></textarea>
+                <textarea id="message" name="message" rows="5" placeholder="Vänligen skriv ditt meddelande här." required></textarea>
                 </div>
                 
                 <button type="submit">Skicka meddelande</button>
 
-                <p id="form-message" aria-live="polite"></p>
+                <p id="form-message" aria-live="polite" aria-atomic="true"></p>
 
             </form>
         </section>
     </main>
 
-    <!-- Sidfot kommer här -->
+    <!-- Sidfot -->
     <footer>
-        
+        <div class="footer-content">
+            <h2>Johan Persson</h2>
+            <p>Tack för att du besökte min portfolio!</p>
+            <p>Besök gärna mina sociala kanaler via länkarna nedan.</p>
+            
+            <nav aria-label="Sociala länkar">
+                <a href="https://github.com/johanpersson-netizen"
+                target="_blank" rel="noopener noreferrer">
+                GitHub <i class="fa-brands fa-github"></i></a>
+
+                <a href="https://www.linkedin.com/in/persson-johan-29711887"
+                target="_blank" rel="noopener noreferrer">
+                LinkedIn <i class="fa-brands fa-linkedin"></i></a>
+
+                <a href="https://www.facebook.com/johan.persson.75/?locale=sv_SE"
+                target="_blank" rel="noopener noreferrer">
+                Facebook <i class="fa-brands fa-facebook"></i></a>
+
+                <a href="https://www.instagram.com/johan8105/"
+                target="_blank" rel="noopener noreferrer">
+                Instagram <i class="fa-brands fa-instagram"></i></a>
+
+                <a href="https://open.spotify.com/artist/7MdFVsq2Uwi8OsdpTXYOy2?si=o4C2qh2_Q3-FvgvLd4DEag"
+                target="_blank" rel="noopener noreferrer">
+                Spotify <i class="fa-brands fa-spotify"></i></a>
+            </nav>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="#start" class="back-to-top">Tillbaka till toppen ↑</a>
+            <p>© 2026 Johan Persson</p>
+        </div>
     </footer>
 
 </body>

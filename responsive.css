@@ -1,11 +1,11 @@
 /* Mobilanpassning */
 @media (max-width: 700px) {
-    nav {
+    header nav {
         flex-direction: column;
         align-items: center;
         gap: 15px;
     }
-    nav ul {
+    header nav ul {
         display: none;
         flex-direction: column;
         align-items: center;
@@ -14,7 +14,7 @@
         margin: 0;
         width: 100%;
     }
-    nav ul.show-menu {
+    header nav ul.show-menu {
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -37,6 +37,9 @@
     }
     #kompetenser {
         padding: 40px 6%;
+    }
+    .skills-grid {
+        grid-template-columns: 1fr;
     }
     #projekt {
         padding: 40px 6%;
@@ -63,5 +66,9 @@
     }
     #kontakt {
         padding: 40px 10%;
+    }
+    .footer-content nav {
+        flex-wrap: wrap;
+        gap: 20px;
     }
 }

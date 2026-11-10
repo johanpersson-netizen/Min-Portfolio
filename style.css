@@ -164,12 +164,12 @@ header {
     position: sticky;
     top: 0;
     background-color: #101d2b;
-    border: 1px solid #0e2e52;
+    border: 2px solid #0e2e52;
     padding: 20px 10px;
     z-index: 1000;
 }
 
-nav {
+header nav {
     display:  flex;
     align-items: center;
     justify-content: space-between;
@@ -183,7 +183,7 @@ nav {
     text-decoration: none;
 }
 
-nav ul {
+header nav ul {
     display: flex;
     gap: 25px;
     list-style: none;
@@ -191,13 +191,19 @@ nav ul {
     padding: 0;
 }
 
-nav a {
+header nav a {
     color: #e8f0f4;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
-nav a:hover {
+header nav a:hover {
     color: #8ecae6;
+}
+header nav a:focus-visible {
+    outline: 2px solid #75b9d8;
+    outline-offset: 5px;
+    border-radius: 3px;
+    color: #75b9d8;
 }
 
 .button-link {
@@ -215,6 +221,12 @@ nav a:hover {
     color: #e8f0f4;
     background-color: #456f8d;
 }
+.button-link:focus-visible {
+    outline: 2px solid #75b9d8;
+    outline-offset: 5px;
+    border-radius: 3px;
+    color: #75b9d8;
+}   
 
 .menu-toggle {
     display: none;
@@ -254,7 +266,7 @@ nav a:hover {
 } 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
@@ -273,6 +285,15 @@ nav a:hover {
     font-size: 2rem;
     display: inline-block;
     transition: transform 0.7s ease;
+}
+.skill-level {
+    font-size: 0.9rem;
+    color: #8ecae6;
+    font-weight: bold;
+    margin-top: 12px;
+}
+.image-gallery {
+    margin-bottom: 14px;
 }
 .image-gallery:hover,
 .skill-card:hover,
@@ -299,7 +320,7 @@ nav a:hover {
 }   
 .project-card a:hover {
     transform: scale(1.15);
-    color: #8571a8;
+    color: #8ecae6;
     text-decoration: underline;
     box-shadow: 0px 10px 20px #75b9d8;
 }
@@ -319,8 +340,8 @@ nav a:hover {
         "amne amne"
         "meddelande meddelande"
         "knapp knapp";
-        gap: 20px;
-        max-width: 900px;
+    gap: 20px;
+    max-width: 900px;
 }
 #kontakt {
     padding: 80px 10%;
@@ -358,6 +379,11 @@ nav a:hover {
     background-color: #456f8d;
     transform: translateY(-2px) scale(1.02);
 }
+#kontakt button:focus-visible,
+#musik-link:focus-visible {
+    outline: 2px solid #75b9d8;
+    outline-offset: 5px;
+}
 #form-message {
     grid-column: 1 / -1;
 }
@@ -382,9 +408,86 @@ nav a:hover {
     transition: border-color 0.5s ease,
                 box-shadow 0.5s ease;
 }
-#kontakt input:focus,
-#kontakt textarea:focus {
-    outline: none;
+#kontakt input:focus-visible,
+#kontakt textarea:focus-visible {
+    outline: 2px solid #75b9d8;
+    outline-offset: 3px;
     border-color: #75b9d8;
     box-shadow: 0 0 10px rgba(117, 185, 216, 0.3);
+}
+
+/* footer */
+footer {
+    background-color: #101d2b;
+    border: 2px solid #0e2e52;
+    padding: 20px 10px;
+    text-align: center;
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.footer-content nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+.footer-content nav a {
+    color: #e8f0f4;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.footer-content nav i {
+    color: #e8f0f4;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+.footer-content nav a:hover {
+    text-decoration: underline;
+    color: #8ecae6;
+    transform: translateY(-3px);
+}
+.footer-bottom a {
+    color: #e8f0f4;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.footer-bottom a:hover {
+    color: #8ecae6;
+    text-decoration: underline;
+}
+.footer-content p {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+.footer-bottom a:focus-visible,
+.footer-content a:focus-visible {
+    outline: 2px solid #75b9d8;
+    outline-offset: 5px;
+    border-radius: 3px;
+    transform: scale(1.05);
+    color: #75b9d8;
+    border-color: #75b9d8;
+    box-shadow: 0 0 10px rgba(117, 185, 216, 0.3);
+}
+
+/* Minskar animationer etc. för användare som valt att minska dessa. Förslag från ChatGPT */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
