@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Min Portfolio</title>
+    <title>Johan | Systemutvecklare</title>
 
     <!-- Externa ikonbibliotek -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -20,11 +20,13 @@
     <!-- Navigeringen kommer här -->
     <header>
         <nav aria-label="Huvudmeny">
-           <a href="#start" class="logo">Min Portfolio</a>
+           <a href="#start" class="logo">Johan</a>
             <button id="menuToggle" class="menu-toggle" 
                     type="button" aria-label="Öppna menyn"
-                    aria-expanded="false"
+                    aria-expanded="false" aria-controls="navLinks"
                     title="Öppna menyn">
+                    
+                <!-- Tre span som formar strecken i hamburgermenyn -->
                 <span></span>  
                 <span></span>
                 <span></span>  
@@ -49,9 +51,9 @@
                 <h1>Hej, jag är Johan.</h1>
 
                 <p class="hero-text">
-                    Jag utbildar mig till systemutvecklare och 
-                    utforskar hur kod kan förvandlas till användbara
-                    och genomtänkta lösningar.
+                    Jag är blivande systemutvecklare med ett intresse för programmering, kreativ problemlösning
+                    och teknik. Här presenterar jag mina kunskaper, projekt och min resa 
+                    mot att bli systemutvecklare.
                 </p>
 
                 <a href="#projekt" class="button-link">
@@ -59,12 +61,11 @@
                 </a>
             </div>
 
-            <figure class="hero-portrait">
-                <img src="Images/self-portrait.jpg" 
+            <div class="hero-portrait">
+                <img src="Images/self-portrait1.png" 
                 alt="Porträtt av mig"
                 >
-                <figcaption>Blivande systemutvecklare</figcaption>
-            </figure>
+            </div>
         </section>
 
         <!-- Om mig  -->
@@ -72,20 +73,31 @@
             <div class="about-content">
                 <h2>Om mig</h2>
                 <p>
-                    Jag studerar till systemutvecklare och gillar att
-                    lära mig hur teknik och kreativ problemlösning kan
-                    kombineras för att skapa användbara lösningar.
+                    Jag studerar till systemutvecklare och drivs av nyfikenhet, 
+                    kreativitet och viljan att hela tiden utvecklas.
                 </p>
                 <p>
-                    Just nu utvecklar jag mina kunskaper inom
-                    programmering och webbutveckling.
+                    Jag har en bakgrund inom musik och pedagogiskt arbete, 
+                    med omkring 25 års erfarenhet av undervisning. 
+                    Under åren har jag även fördjupat mig inom musikproduktion och kreativt skapande. 
+                    Det har gett mig erfarenhet av att kombinera struktur, problemlösning och kreativitet, 
+                    men också av att driva projekt hela vägen från idé till färdigställande. 
+                    Läraryrket har dessutom utvecklat min förmåga att kommunicera, samarbeta och 
+                    bemöta människor med olika behov och perspektiv – 
+                    egenskaper som jag har stor nytta av inom systemutveckling.
+                </p>
+                <p>
+                    Nu har jag valt att ta med mig dessa erfarenheter in i teknikens värld. 
+                    Under utbildningen utvecklar jag mina kunskaper inom programmering och webbutveckling. 
+                    Jag tycker om att förstå hur saker fungerar, utforska nya tekniker och 
+                    omsätta idéer till fungerande lösningar.
                 </p>
             </div>
-            
-            <figure class="about-portrait">
+
+            <div class="about-portrait">
                 <img src="Images/self-portrait.jpg" alt="Porträtt av mig">
-                <figcaption>Nyfikenhet, utveckling och problemlösning.</figcaption>
-            </figure>
+            </div>
+                
         </section>
 
         <!-- Musik & Kreativitet -->
@@ -93,23 +105,27 @@
             <h2>Teknik möter kreativitet</h2>
                    
             <p>
-                Innan jag började studera systemutveckling arbetade
-                jag i 25 år som gitarrlärare. Musik har därför alltid
-                varit en stor del av mitt liv.
+                Musik har länge varit en viktig del av mitt liv. 
+                Det är en uttrycksform där jag får ge utlopp för min kreativitet. 
+                En av de största drivkrafterna för mig är att få följa hela processen – 
+                från den första musikaliska idén till inspelning, ljudbearbetning och mixning av en färdig produktion.
             </p>
 
             <p>
-                Jag har även studerat musikproduktion och skrivit,
-                producerat och spelat in ett eget album med 12 låtar.
+                Jag har även studerat musikproduktion och skrivit, producerat och spelat in ett eget album med 12 låtar.
+                Hela produktionen är genomförd på egen hand, 
+                från låtskrivande och inspelning till MIDI-programmering, mixning och mastring.
             </p>
-            <!-- Bildgalleriet -->
+             <p>Här är några av instrumenten och den utrustning jag använde vid inspelningen av mitt album. </p>
+                <p>Klicka på bilderna för att se dem i större format.</p>
+                <!-- Bildgalleriet -->
             <div class="musik-images">               
                 <figure>
                     <button type="button" class="image-gallery">
                         <img src="Images/elbas.jpg"
                             alt="Kroppen av en Fender Jazz Elbas">
                     </button>
-                    <figcaption>Kroppen av en Fender Jazz Elbas</figcaption>
+                    <figcaption>Kroppen på en Fender Jazz-bas</figcaption>
                 </figure>
                  
                 <figure>
@@ -134,7 +150,7 @@
                         <img src="Images/kemper.jpg"
                             alt="Kemper gitarrförstärkare">
                     </button>
-                    <figcaption>Kemper gitarrförstärkare</figcaption>
+                    <figcaption>Kemper-gitarrförstärkare</figcaption>
                 </figure>               
             </div>
 
@@ -145,10 +161,11 @@
             </dialog>
 
             <p>
-                Mitt intresse för musik och teknik har väckt en idé
-                om att i framtiden erbjuda specialskriven musik till
-                företag, exempelvis jinglar och signaturmelodier
-                som förstärker ett varumärke.
+                Mitt intresse för musik och teknik har väckt tankar om hur dessa områden kan kombineras. 
+                Jag ser möjligheter att erbjuda företag specialskriven musik, 
+                exempelvis jinglar och signaturmelodier som förstärker ett varumärke, 
+                eller bakgrundsmusik som skapar en särskild känsla när besökare kommer in på en hemsida. 
+                Det är en idé som jag gärna skulle vilja utveckla vidare i framtiden.
             </p>
 
             <a id="musik-link" href="https://open.spotify.com/album/2qTO6iReV90O8hCw9FwNGS"
@@ -169,83 +186,99 @@
                         C# <i class="devicon-csharp-plain"></i>
                     </h3>
                     <p>Programmering och objektorientering</p>
-                    <p class="skill-level">Grundläggande kunskaper</p>
+                    <p class="skill-level">Grundläggande</p>
                 </article>
                 <article class="skill-card">
                     <h3>
                         HTML <i class="devicon-html5-plain"></i>
                         och CSS <i class="devicon-css3-plain"></i>
                     </h3>
-                    <p>Struktur och responsiv design</p>
-                    <p class="skill-level">Grundläggande kunskaper</p>
+                    <p>Struktur, styling och responsiv design</p>
+                    <p class="skill-level">Grundläggande</p>
                 </article>
                 <article class="skill-card">
                     <h3>
                         JavaScript <i class="devicon-javascript-plain"></i> 
                     </h3>
-                    <p>DOM och interaktivitet</p>
-                    <p class="skill-level">Grundläggande kunskaper</p>
+                    <p>Grundläggande programmering, DOM och interaktivitet</p>
+                    <p class="skill-level">Grundläggande</p>
                 </article>
                 <article class="skill-card">
                     <h3>
                         Git <i class="devicon-git-plain"></i>
                         & GitHub <i class="devicon-github-original"></i> 
                     </h3>
-                    <p>Versionshantering</p>
-                    <p class="skill-level">Grundläggande kunskaper</p>
+                    <p>Versionshantering och samarbete i utvecklingsprojekt</p>
+                    <p class="skill-level">Grundläggande</p>
                 </article>
                 <article class="skill-card">
                     <h3>
                         AI <i class="fa-solid fa-brain"></i>
                     </h3>
-                    <p>AI-assisterad utveckling och prompt engineering</p>
-                    <p class="skill-level">Goda kunskaper</p>
+                    <p>AI-assisterad utveckling, promptning och problemlösning</p>
+                    <p class="skill-level">Goda</p>
                 </article>
                 <article class="skill-card">
                     <h3>
                         Cubase <i class="fa-solid fa-sliders"></i>
                     </h3>
-                    <p>Musikproduktion och ljudbearbetning</p>
-                    <p class="skill-level">Mycket goda kunskaper</p>
+                    <p>Musikproduktion, inspelning och ljudbearbetning</p>
+                    <p class="skill-level">Mycket goda</p>
                 </article>                
             </div>
         </section>
 
-         <!-- Projektet -->
+         <!-- Projekt sektionen -->
         <section id="projekt">
            <h2>Projekt</h2>
            <div class="projects-grid">
+            
+            <!-- Bibliotekshanteringssystemet -->
             <article class="project-card">
                 <h3>Bibliotekshanteringssystem</h3>
-                <p>En konsolbaserad applikation för att hantera böcker, användare och utlåning.
-                    Projektet är byggt med objektorienterad programmering.
+                <p>En konsolbaserad applikation för att hantera böcker, användare och utlåning. 
+                    Projektet är utvecklat med objektorienterad programmering 
+                    och använder listor för att hantera information.
                 </p>
-                <p class="project-tech">Tekniker som använts i projektet: C#, OOP, och List&lt;T&gt;  
-                </p>
+
+                <p class="project-tech">Tekniker som använts i projektet:</p>
+                <p>C#, OOP och List&lt;T&gt;</p>
+
                 <a href="https://github.com/johanpersson-netizen/Bibliotekshanteringssystem" 
                         target="_blank"
                         rel="noopener noreferrer">
                     Länk till GitHub <i class="devicon-github-plain"></i></a>
             </article>
 
+            <!-- ScoreManager -->
             <article class="project-card">
-                <h3>Points Mark</h3>
+                <h3>ScoreManager</h3>
                 <p>En konsolbaserad applikation för att registrera spelare,
-                    hantera poäng och presentera statistik
+                    hantera poäng och sammanställa statistik.
                 </p>
-                <p class="project-tech">Tekniker som använts i projektet: C# och List&lt;T&gt;</p>
-                <a href="https://github.com/johanpersson-netizen/Points-Mark"
+
+                <p class="project-tech">Tekniker som använts i projektet:</p>
+                <p> C# och List&lt;T&gt;</p>
+
+                <a href="https://github.com/johanpersson-netizen/ScoreManager.git"
                     target="_blank"
                     rel="noopener noreferrer">
                 Länk till GitHub <i class="devicon-github-plain"></i></a>
             </article>
 
+            <!-- Min portfolio -->
             <article class="project-card">
                 <h3>Min professionella portfolio</h3>
-                <p>Ett projekt som sammanför HTML-struktur, CSS-design och interaktivitet via JavaScript.
-                    Webbsidan är responsiv i sin design och interaktiv med JavaScript.
+                <p>
+                    En responsiv webbplats som presenterar min bakgrund,
+                    kompetenser och projekt. Webbplatsen innehåller
+                    interaktiva funktioner och är utvecklad med fokus på
+                    användarvänlighet och tillgänglighet.
                 </p>
-                <p class="project-tech">Tekniker som använts i projektet: HTML, CSS och JavaScript.</p>
+
+                <p class="project-tech">Tekniker som använts i projektet:</p>
+                <p>HTML, CSS och JavaScript.</p>
+
                 <a href="https://github.com/johanpersson-netizen/Min-Portfolio"
                     target="_blank"
                     rel="noopener noreferrer">
