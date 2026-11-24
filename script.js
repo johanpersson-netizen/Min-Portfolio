@@ -2,13 +2,13 @@
 let menuToggle = document.getElementById("menuToggle");
 let navLinks = document.getElementById("navLinks");
 
-menuToggle.addEventListener("click", function() {
+menuToggle.addEventListener("click", function () {
     navLinks.classList.toggle("show-menu");
     menuToggle.classList.toggle("active");
 
     let menuOpen = navLinks.classList.contains("show-menu");
     menuToggle.setAttribute("aria-expanded", menuOpen);
-    if(menuOpen) {
+    if (menuOpen) {
         menuToggle.setAttribute("title", "Stäng menyn")
         menuToggle.setAttribute("aria-label", "Stäng menyn")
     }
@@ -20,8 +20,8 @@ menuToggle.addEventListener("click", function() {
 
 let navItems = navLinks.querySelectorAll("a");
 
-navItems.forEach(function(item) {
-    item.addEventListener("click", function() {
+navItems.forEach(function (item) {
+    item.addEventListener("click", function () {
         menuToggle.classList.remove("active");
         navLinks.classList.remove("show-menu");
         menuToggle.setAttribute("aria-label", "Öppna menyn");
@@ -51,8 +51,8 @@ kontaktForm.addEventListener("submit", async function (event) {
     //Deaktiverar skicka knappen tills meddelandet skickats. Ändrar bool i finally blocket.
     skickaKnapp.disabled = true;
     skickaKnapp.textContent = "Skickar...";
-        
-    try { 
+
+    try {
         //Fetch() - Skicka till Formspree. Await - Vänta på respons
         let svar = await fetch("https://formspree.io/f/mljjoqyb", {
             method: "POST",
@@ -69,7 +69,7 @@ kontaktForm.addEventListener("submit", async function (event) {
         else {
             formMeddelande.textContent = "Meddelandet kunde inte skickas. Försök igen senare.";
         }
-    //Fångar upp eventuella fel - Tappad internetanslutning t.ex.
+        //Fångar upp eventuella fel - Tappad internetanslutning t.ex.
     } catch (fel) {
         formMeddelande.textContent = "Ett tekniskt fel uppstod. Försök igen senare.";
     }
@@ -89,8 +89,8 @@ const dialogCaption = document.getElementById("dialog-caption");
 const closeDialog = document.getElementById("close-dialog");
 
 //Funktion för att iterera mellan buttons.
-galleryImages.forEach(function(button) {
-    button.addEventListener("click", function() {
+galleryImages.forEach(function (button) {
+    button.addEventListener("click", function () {
         //Hämtar bilden och bildtexten från den klickade knappen (bilden).
         const image = button.querySelector("img");
         const figCaption = button.parentElement.querySelector("figcaption");
@@ -111,13 +111,13 @@ galleryImages.forEach(function(button) {
 });
 
 //Funktion som stänger fönstret om användaren klickar utanför bilden.
-imageDialog.addEventListener("click", function(event) {
+imageDialog.addEventListener("click", function (event) {
     if (event.target === imageDialog) {
         imageDialog.close();
     }
 });
 
- //Funktion för att aktivera stäng knappen i galleriet.
-closeDialog.addEventListener("click", function() {        
+//Funktion för att aktivera stäng knappen i galleriet.
+closeDialog.addEventListener("click", function () {
     imageDialog.close();
 }); 

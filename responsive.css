@@ -5,6 +5,7 @@
         align-items: center;
         gap: 15px;
     }
+
     header nav ul {
         display: none;
         flex-direction: column;
@@ -14,39 +15,49 @@
         margin: 0;
         width: 100%;
     }
+
     header nav ul.show-menu {
         text-align: center;
         display: flex;
         flex-direction: column;
     }
+
     .hero {
         flex-direction: column;
         text-align: center;
         padding: 40px 6%;
     }
+
     .hero-portrait img {
         max-width: 260px;
     }
+
     #om-mig {
         flex-direction: column;
         text-align: center;
         padding: 40px 6%;
     }
+
     .musik-images {
         grid-template-columns: repeat(2, minmax(0, 135px));
     }
+
     #kompetenser {
         padding: 40px 6%;
     }
+
     .skills-grid {
         grid-template-columns: 1fr;
     }
+
     #projekt {
         padding: 40px 6%;
     }
+
     .about-portrait img {
         max-width: 260px;
     }
+
     .menu-toggle {
         display: flex;
         font-size: 1.5rem;
@@ -55,18 +66,21 @@
         border: none;
         cursor: pointer;
     }
+
     #kontakt form {
         grid-template-columns: 1fr;
-        grid-template-areas: 
+        grid-template-areas:
             "namn"
             "epost"
             "amne"
             "meddelande"
             "knapp";
     }
+
     #kontakt {
         padding: 40px 10%;
     }
+
     .footer-content nav {
         flex-wrap: wrap;
         gap: 20px;

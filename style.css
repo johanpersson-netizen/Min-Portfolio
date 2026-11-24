@@ -19,9 +19,11 @@ body {
     max-width: 350px;
     height: auto;
 }
+
 .musik-images figure {
     margin: 0;
 }
+
 .musik-images {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 135px));
@@ -29,6 +31,7 @@ body {
     justify-content: start;
     margin: 30px 0;
 }
+
 .musik-images img {
     border: 1px solid #0e2e52;
     width: 100%;
@@ -36,6 +39,7 @@ body {
     object-fit: cover;
     border-radius: 15px;
 }
+
 .image-gallery {
     background: none;
     border: none;
@@ -46,6 +50,7 @@ body {
     border-radius: 15px 15px 0 0;
     transition: 0.5s ease;
 }
+
 #image-dialog {
     text-align: center;
     font-size: large;
@@ -57,6 +62,7 @@ body {
     background-color: #101d2b;
     color: #e8f0f4;
 }
+
 #dialog-image {
     border: 1px solid #8ecae6;
     border-radius: 3px;
@@ -66,22 +72,25 @@ body {
     object-fit: contain;
     margin: 20px auto;
 }
+
 #close-dialog {
     display: block;
     margin-left: auto;
     cursor: pointer;
     transition: 0.5s ease;
 }
+
 #close-dialog:hover {
     transform: translateY(-5px) scale(1.05);
     border-color: #75b9d8;
     box-shadow: 3px 10px 40px rgba(129, 186, 216, 0.3);
 }
+
 #close-dialog:focus-visible {
     outline: 2px solid #75b9d8;
     outline-offset: 5px;
     border-radius: 3px;
-    transform: translateY(-5px) scale(1.05);    
+    transform: translateY(-5px) scale(1.05);
     border-color: #75b9d8;
     box-shadow: 3px 10px 40px rgba(129, 186, 216, 0.3);
 }
@@ -139,6 +148,7 @@ body {
     margin: 0;
     flex: 0 1 350px;
 }
+
 .hero-portrait img {
     display: block;
     width: 100%;
@@ -149,15 +159,13 @@ body {
 
 .hero {
     background-image:
-        linear-gradient(
-            rgba(117, 137, 158, 0.3),
-            rgba(45, 71, 100, 0.95)
-        ),
-        url("Images/bolmen-frusen.jpeg");
+        linear-gradient(rgba(117, 137, 158, 0.3),
+            rgba(45, 71, 100, 0.95)),
+        url("Images/bolmen-frusen\ -\ kopia.jpeg");
 
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;
 }
 
 header {
@@ -170,7 +178,7 @@ header {
 }
 
 header nav {
-    display:  flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 30px;
@@ -196,9 +204,11 @@ header nav a {
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease;
 }
+
 header nav a:hover {
     color: #8ecae6;
 }
+
 header nav a:focus-visible {
     outline: 2px solid #75b9d8;
     outline-offset: 5px;
@@ -217,16 +227,18 @@ header nav a:focus-visible {
     text-decoration: none;
     transition: color 0.3s ease, background-color 0.3s ease;
 }
+
 .button-link:hover {
     color: #e8f0f4;
     background-color: #456f8d;
 }
+
 .button-link:focus-visible {
     outline: 2px solid #75b9d8;
     outline-offset: 5px;
     border-radius: 3px;
     color: #75b9d8;
-}   
+}
 
 .menu-toggle {
     display: none;
@@ -234,11 +246,13 @@ header nav a:focus-visible {
     gap: 6px;
     padding: 8px;
 }
+
 .menu-toggle:focus-visible {
     outline: 2px solid #75b9d8;
     outline-offset: 5px;
     border-radius: 3px;
 }
+
 .menu-toggle span {
     display: block;
     width: 28px;
@@ -247,18 +261,23 @@ header nav a:focus-visible {
     border-radius: 3px;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
 .menu-toggle.active span:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
 }
+
 .menu-toggle.active span:nth-child(2) {
     opacity: 0;
 }
+
 .menu-toggle.active span:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
 }
+
 #musik {
     padding: 80px 10%;
 }
+
 #musik p {
     max-width: 800px;
     line-height: 1.7;
@@ -267,7 +286,8 @@ header nav a:focus-visible {
 
 #kompetenser {
     padding: 80px 10%;
-} 
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -281,24 +301,28 @@ header nav a:focus-visible {
     padding: 20px;
     border-radius: 8px;
     border: 1px solid #0e2e52;
-    transition: transform 0.7s ease, 
-                border-color 0.7s ease, 
-                box-shadow 0.7s ease;
+    transition: transform 0.7s ease,
+        border-color 0.7s ease,
+        box-shadow 0.7s ease;
 }
+
 .skill-card i {
     font-size: 2rem;
     display: inline-block;
     transition: transform 0.7s ease;
 }
+
 .skill-level {
     font-size: 0.9rem;
     color: #8ecae6;
     font-weight: bold;
     margin-top: 12px;
 }
+
 .image-gallery {
     margin-bottom: 14px;
 }
+
 .image-gallery:hover,
 .skill-card:hover,
 .project-card:hover {
@@ -306,33 +330,40 @@ header nav a:focus-visible {
     border-color: #75b9d8;
     box-shadow: 3px 10px 40px rgba(129, 186, 216, 0.3);
 }
+
 .skill-card:hover i {
     transform: scale(1.2);
 }
+
 #projekt {
     padding: 80px 10%;
 }
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
+
 .project-links {
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
 }
+
 .project-card a {
     display: inline-block;
     transition: transform 1.5s ease, box-shadow 1.5s ease;
     color: rgb(179, 182, 206);
-}   
+}
+
 .project-card a:hover {
     transform: scale(1.15);
     color: #8ecae6;
     text-decoration: underline;
     box-shadow: 0px 10px 20px #75b9d8;
 }
+
 .image-gallery:focus-visible,
 .project-card a:focus-visible {
     outline: 2px solid #75b9d8;
@@ -341,10 +372,11 @@ header nav a:focus-visible {
     transform: scale(1.05);
     color: #75b9d8;
 }
+
 #kontakt form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
+    grid-template-areas:
         "namn epost"
         "amne amne"
         "meddelande meddelande"
@@ -352,21 +384,27 @@ header nav a:focus-visible {
     gap: 20px;
     max-width: 900px;
 }
+
 #kontakt {
     padding: 80px 10%;
 }
+
 .form-name {
     grid-area: namn;
 }
+
 .form-email {
     grid-area: epost;
 }
+
 .form-subject {
     grid-area: amne;
 }
+
 .form-message {
     grid-area: meddelande;
 }
+
 #musik-link,
 #kontakt button {
     padding: 12px 24px;
@@ -378,24 +416,29 @@ header nav a:focus-visible {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease,
-                transform 0.3s ease;
+        transform 0.3s ease;
 }
+
 #kontakt button {
     grid-area: knapp;
 }
+
 #musik-link:hover,
 #kontakt button:hover {
     background-color: #456f8d;
     transform: translateY(-2px) scale(1.02);
 }
+
 #kontakt button:focus-visible,
 #musik-link:focus-visible {
     outline: 2px solid #75b9d8;
     outline-offset: 5px;
 }
+
 #form-message {
     grid-column: 1 / -1;
 }
+
 .form-name,
 .form-email,
 .form-subject,
@@ -404,6 +447,7 @@ header nav a:focus-visible {
     flex-direction: column;
     gap: 8px;
 }
+
 #kontakt input,
 #kontakt textarea {
     width: 100%;
@@ -415,8 +459,9 @@ header nav a:focus-visible {
     border-radius: 6px;
     font-size: 1rem;
     transition: border-color 0.5s ease,
-                box-shadow 0.5s ease;
+        box-shadow 0.5s ease;
 }
+
 #kontakt input:focus-visible,
 #kontakt textarea:focus-visible {
     outline: 2px solid #75b9d8;
@@ -432,12 +477,14 @@ footer {
     padding: 20px 10px;
     text-align: center;
 }
+
 .footer-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
 }
+
 .footer-content nav {
     display: flex;
     justify-content: center;
@@ -445,6 +492,7 @@ footer {
     gap: 30px;
     margin-bottom: 20px;
 }
+
 .footer-content nav a {
     color: #e8f0f4;
     text-decoration: none;
@@ -452,29 +500,35 @@ footer {
     align-items: center;
     gap: 8px;
 }
+
 .footer-content nav i {
     color: #e8f0f4;
     text-decoration: none;
     font-size: 1.3rem;
 }
+
 .footer-content nav a:hover {
     text-decoration: underline;
     color: #8ecae6;
     transform: translateY(-3px);
 }
+
 .footer-bottom a {
     color: #e8f0f4;
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease;
 }
+
 .footer-bottom a:hover {
     color: #8ecae6;
     text-decoration: underline;
 }
+
 .footer-content p {
     margin-top: 5px;
     margin-bottom: 0;
 }
+
 .footer-bottom a:focus-visible,
 .footer-content a:focus-visible {
     outline: 2px solid #75b9d8;
